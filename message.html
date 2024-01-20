@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Några ord</title>
+      <link rel="stylesheet" href="styles/global.css" />
+      <link rel="stylesheet" href="styles/message.css" />
+      <link rel="icon" href="assets/heart.png" />
+   </head>
+
+   <body>
+      <nav class="navbar" onmouseleave="reset(2)">
+         <ul id="navCollection">
+            <li class="navElement">
+               <a class="navLink" href="index.html">
+                  <span class="icon fa-solid fa-question"></span>
+                  <p class="text">En fråga...</p>
+               </a>
+            </li>
+            <li class="navElement">
+               <a class="navLink" href="message.html">
+                  <span class="icon fa-solid fa-heart iconActive"></span>
+                  <p class="text textActive">Några ord</p>
+               </a>
+            </li>
+            <li class="navElement">
+               <a class="navLink" href="gift.html">
+                  <span class="icon fa-solid fa-gift"></span>
+                  <p class="text">Till dig</p>
+               </a>
+            </li>
+         </ul>
+         <div id="indicator" style="transform: var(--pos-2)"></div>
+      </nav>
+   </body>
+
+   <script src="scripts/message.js"></script>
+   <script src="scripts/navbar.js"></script>
+</html>

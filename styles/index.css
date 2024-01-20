@@ -1,0 +1,82 @@
+#card {
+   width: 500px;
+   height: 600px;
+   background-color: #ffb6c1;
+   border-radius: 20px;
+   box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.5);
+   scale: 0.7;
+   transform-style: preserve-3d;
+   transition: transform 1s, margin-bottom 0.5s ease-in-out;
+}
+
+.cardSide {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+#front {
+   backface-visibility: hidden;
+}
+
+#back {
+   transform: rotateY(180deg);
+   backface-visibility: hidden;
+}
+
+.title {
+   color: white;
+   font-family: 'Poppins';
+   font-size: 30pt;
+   filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.7));
+}
+
+#cat1 {
+   width: 300px;
+   height: 220px;
+   object-fit: cover;
+   object-position: 0 70%;
+   position: relative;
+   left: 40px;
+   margin: 40px 0;
+}
+
+#buttonsCont {
+   width: 100%;
+   height: 70px;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.btn {
+   color: white;
+   font-family: 'Poppins';
+   font-size: 25pt;
+   background-color: #e99ca9;
+   cursor: pointer;
+   border: none;
+   width: 200px;
+   height: 70px;
+   border-radius: 15px;
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+   transition: scale 0.15s, background-color 0.15s;
+}
+
+#yesBtn:hover {
+   scale: 1.08;
+   background-color: #e3b2ba;
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#noBtn {
+   transition: left 0.5s ease-out, top 0.5s ease-in-out, opacity 0.5s;
+}
+
+.navbarHidden {
+   bottom: -15vh;
+   opacity: 0;
+}

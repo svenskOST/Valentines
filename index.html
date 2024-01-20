@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>En fråga...</title>
+      <link rel="stylesheet" href="styles/global.css" />
+      <link rel="stylesheet" href="styles/index.css" />
+      <link rel="icon" href="assets/heart.png" />
+   </head>
+
+   <body>
+      <main id="card">
+         <div id="front" class="cardSide">
+            <h1 class="title">Bli min valentine?</h1>
+            <img id="cat1" src="assets/cat1.webp" />
+            <div id="buttonsCont">
+               <button class="btn" id="yesBtn">Ja</button>
+               <button class="btn" id="noBtn">Nej</button>
+            </div>
+         </div>
+         <div id="back" class="cardSide">
+            <h1 class="title">Yippieee</h1>
+            <img src="assets/cat2.gif" />
+         </div>
+      </main>
+      <nav class="navbar navbarHidden" onmouseleave="reset(1)">
+         <ul id="navCollection">
+            <li class="navElement">
+               <a class="navLink" href="index.html">
+                  <span class="icon fa-solid fa-question iconActive"></span>
+                  <p class="text textActive">En fråga...</p>
+               </a>
+            </li>
+            <li class="navElement">
+               <a class="navLink" href="message.html">
+                  <span class="icon fa-solid fa-heart"></span>
+                  <p class="text">Några ord</p>
+               </a>
+            </li>
+            <li class="navElement">
+               <a class="navLink" href="gift.html">
+                  <span class="icon fa-solid fa-gift"></span>
+                  <p class="text">Till dig</p>
+               </a>
+            </li>
+         </ul>
+         <div id="indicator" style="transform: var(--pos-1)"></div>
+      </nav>
+   </body>
+
+   <script src="scripts/index.js"></script>
+   <script src="scripts/navbar.js"></script>
+</html>
