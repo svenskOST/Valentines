@@ -1,0 +1,32 @@
+#message {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 700px;
+   min-height: 300px;
+   position: absolute;
+   top: 150px;
+   background-color: #2f2f2f;
+   border-radius: 20px;
+   box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+   color: #e2e1df;
+   font-family: 'Poppins';
+   scale: 0;
+   opacity: 0;
+   transition: scale 1s ease-out, opacity 1s;
+}
+
+#title {
+   font-size: 30pt;
+   margin-top: 30px;
+   margin-bottom: 20px;
+}
+
+#text {
+   font-size: 20pt;
+   padding: 0 60px;
+   position: relative;
+   left: 10px;
+   margin-bottom: 30px;
+}

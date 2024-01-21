@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 const card = document.getElementById('card')
+const front = document.getElementById('front')
 const yesBtn = document.getElementById('yesBtn')
 const noBtn = document.getElementById('noBtn')
 const navbarHidden = document.getElementsByClassName('navbarHidden')[0]
@@ -22,6 +23,7 @@ yesBtn.onclick = () => {
    card.style.transform = 'rotateY(180deg)'
 
    setTimeout(() => {
+      front.style.opacity = 0
       card.style.marginBottom = '20vh'
       navbarHidden.style.bottom = '10vh'
       navbarHidden.style.opacity = 1
@@ -53,4 +55,12 @@ noBtn.onmouseenter = () => {
       noBtn.style.left = `${x}px`
       noBtn.style.top = `${y}px`
    }, 1)
+}
+
+const linkTransition = () => {
+   card.style.transition = '0.5s'
+   card.style.transform = 'rotateY(90deg)'
+   setTimeout(() => {
+      document.location.href = './message.html'
+   }, 600)
 }
