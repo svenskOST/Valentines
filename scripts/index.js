@@ -18,6 +18,10 @@ yesBtn.onmouseup = () => {
 yesBtn.onclick = () => {
    if (!firstInteraction) {
       noBtn.style.opacity = 0
+   } else {
+      setTimeout(() => {
+         noBtn.style.opacity = 0
+      }, 500)
    }
 
    card.style.transform = 'rotateY(180deg)'
@@ -57,10 +61,11 @@ noBtn.onmouseenter = () => {
    }, 1)
 }
 
-const linkTransition = () => {
+const linkTransition = link => {
+   navbar.onmouseleave = null
    card.style.transition = '0.5s'
    card.style.transform = 'rotateY(90deg)'
    setTimeout(() => {
-      document.location.href = './message.html'
+      document.location.href = `./${link}.html`
    }, 600)
 }

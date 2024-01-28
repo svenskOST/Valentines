@@ -59,6 +59,7 @@ body {
    text-align: center;
    text-decoration: none;
    color: #ffffff80;
+   cursor: pointer;
 }
 
 .navLink:visited {

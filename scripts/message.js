@@ -46,3 +46,15 @@ const write = (element, content) => {
       }, key * 30)
    })
 }
+
+const linkTransition = link => {
+   navbar.onmouseleave = null
+   if (link == 'index') {
+      navbar.style.opacity = 0
+   }
+   message.style.transition = '0.5s'
+   message.style.opacity = 0
+   setTimeout(() => {
+      document.location.href = `./${link}.html`
+   }, 600)
+}
