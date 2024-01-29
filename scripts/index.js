@@ -29,7 +29,7 @@ yesBtn.onclick = () => {
    setTimeout(() => {
       front.style.opacity = 0
       card.style.marginBottom = '20vh'
-      navbarHidden.style.bottom = '10vh'
+      navbarHidden.style.bottom = '7vh'
       navbarHidden.style.opacity = 1
    }, 1500)
 }
