@@ -66,6 +66,6 @@ const linkTransition = link => {
    card.style.transition = '0.5s'
    card.style.transform = 'rotateY(90deg)'
    setTimeout(() => {
-      document.location.href = `./${link}.html`
+      document.location.href = `pages/${link}.html`
    }, 600)
 }

@@ -55,6 +55,10 @@ const linkTransition = link => {
    message.style.transition = '0.5s'
    message.style.opacity = 0
    setTimeout(() => {
-      document.location.href = `./${link}.html`
+      if (link == 'index') {
+         document.location.href = '../index.html'
+      } else {
+         document.location.href = 'gift.html'
+      }
    }, 600)
 }
