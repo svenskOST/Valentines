@@ -2,8 +2,8 @@ Tack för att du har valt att ge din partner en alla-hjärtans-dag-webbsida!
 
     1. Du öppnar webbsidan genom att öppna filen "index.html" i denna mapp.
 
-    2. För att ditt egna meddelande i "Några ord" sidan skall dyka upp öppnar du filen "message.json". 
-       Där kan du ersätta "null" och skriva en egen titel och text inom situationstecken.
+    2. För att ditt egna meddelande i "Några ord" sidan skall dyka upp öppnar du filen "message.html" i mappen "pages" med
+       anteckningar. Där ändrar du texten "Skriv din titel här" och "Skriv din text här". Se "instruktion.gif".
 
     3. Du kan ändra musiken genom att välja föredragen låt från YouTube, kopiera videons URL och ladda ned den som mp3 ifrån
        https://ytmp3.nu för att sedan döpa filen till "music.mp3" och ersätta den befintliga filen i denna mapp.
