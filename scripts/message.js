@@ -2,8 +2,12 @@ const message = document.getElementById('message')
 const titleEl = document.getElementById('title')
 const textEl = document.getElementById('text')
 
-const titlePlaceholder = titleEl.innerHTML
-const textPlaceholder = textEl.innerHTML
+const titlePlaceholder = 'Ditt meddelande'
+const textPlaceholder =
+   'Här visas ditt personliga meddelande till mottagaren av webbsidan. Följ instruktionerna i guide.txt för att skriva ditt meddelande.'
+
+const titleContent = titleEl.innerHTML
+const textContent = textEl.innerHTML
 
 titleEl.innerHTML = ''
 textEl.innerHTML = ''
@@ -12,30 +16,21 @@ setTimeout(() => {
    message.style.scale = 1
    message.style.opacity = 1
    setTimeout(() => {
-      fetchData()
+      showMessage()
    }, 1000)
 }, 500)
 
-const fetchData = async () => {
-   try {
-      const response = await fetch('../message.json')
-      var data = await response.json()
+const showMessage = () => {
+   if (titleContent != 'Skriv din titel här') {
+      write(titleEl, titleContent)
+   } else {
+      write(titleEl, titlePlaceholder)
+   }
 
-      var title = data.title
-      var text = data.text
-
-      if (data.title != null) {
-         write(titleEl, title)
-      } else {
-         write(titleEl, titlePlaceholder)
-      }
-      if (data.text != null) {
-         write(textEl, text)
-      } else {
-         write(textEl, textPlaceholder)
-      }
-   } catch (error) {
-      console.error('Error: ', error)
+   if (textContent != 'Skriv din text här') {
+      write(textEl, textContent)
+   } else {
+      write(textEl, textPlaceholder)
    }
 }
 
