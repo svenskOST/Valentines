@@ -1,3 +1,5 @@
+const giftLabel = document.getElementById('giftLabel')
+const gift = document.getElementById('gift')
 const background = document.getElementsByClassName('background')[0]
 const audio = document.getElementsByTagName('audio')[0]
 
@@ -8,11 +10,19 @@ const showNavbar = () => {
    navbar.style.bottom = '7vh'
 }
 
-audio.play()
-
 setTimeout(() => {
+   giftLabel.style.opacity = 1
+   gift.style.opacity = 1
+}, 10)
+
+gift.onclick = () => {
+   audio.play()
    hideNavbar()
+   giftLabel.style.opacity = 0
+   gift.style.opacity = 0
+
    setTimeout(() => {
+      gift.style.display = 'none'
       background.style.opacity = 1
       setTimeout(() => {
          background.classList.remove('not-loaded')
@@ -26,5 +36,5 @@ setTimeout(() => {
             }
          }, 2000)
       }, 5000)
-   }, 1000)
-}, 1000)
+   }, 2000)
+}
