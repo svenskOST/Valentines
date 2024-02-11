@@ -10,13 +10,28 @@ const showNavbar = () => {
    navbar.style.bottom = '7vh'
 }
 
+const playAudio = () => {
+   audio.volume = 0
+   audio.currentTime = audioTimeStamp
+   audio.play()
+   var vol = 0
+   var interval = setInterval(() => {
+      if (vol >= 1) {
+         clearInterval(interval)
+      } else {
+         audio.volume = vol
+         vol += 0.001
+      }
+   }, 10)
+}
+
 setTimeout(() => {
    giftLabel.style.opacity = 1
    gift.style.opacity = 1
 }, 10)
 
 gift.onclick = () => {
-   audio.play()
+   playAudio()
    hideNavbar()
    giftLabel.style.opacity = 0
    gift.style.opacity = 0
